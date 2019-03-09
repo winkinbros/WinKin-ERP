@@ -1,6 +1,7 @@
 package com.winkin.erp;
 
 
+import com.winkin.erp.model.WKM_USER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
@@ -55,7 +56,7 @@ public class Config {
         props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
 
         factoryBean.setHibernateProperties(props);
-        factoryBean.setAnnotatedClasses();
+        factoryBean.setAnnotatedClasses(WKM_USER.class);
         return factoryBean;
     }
 
