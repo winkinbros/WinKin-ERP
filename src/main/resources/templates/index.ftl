@@ -5,6 +5,7 @@
     <title>${test}</title>
 </head>
 <body>
-${test}${test}${test}${test}${test}${test}${test}${test}${test}${test}${test}
+<#include "/include/header.ftl"> 
+<#include "/include/footer.ftl"> 
 </body>
 </html>
