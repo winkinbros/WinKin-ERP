@@ -1,0 +1,1 @@
+<div>Developed by @ CVAR</div>
