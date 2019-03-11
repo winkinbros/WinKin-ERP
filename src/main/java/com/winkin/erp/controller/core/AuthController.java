@@ -26,7 +26,7 @@ public class AuthController {
 
         model.addAttribute("test","test");
 
-        return new ModelAndView("index");
+        return new ModelAndView("login");
     }
 
 
