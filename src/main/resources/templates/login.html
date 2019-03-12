@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Java Blog</title>
-
-
     <!--CSS FILES-->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/animbg.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/w3.css}" />
 </head>
-<body>
-<h1 th:text="${test}"></h1>
-</body>
-</html>
 
+<body>
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <form  class ="w3-card-4 login-form" action="/login">
+                    <div class="imgcontainer">
+                        <h3 class="logo-title">WinKin ERP</h3>
+                    </div>
+                    <div class="container">
+                        <label class="text-dark" for="uname"><b>Username/User Id</b></label>
+                        <input type="text" placeholder="Enter Username/User Id" name="userid" required="required" />
+                        <label class="text-dark" for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required="required" />
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="text-dark">
+                                    <input type="checkbox" checked="checked" name="remember" /> Remember me
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="psw text-dark">Forgot Password? <a class ="text-url" href="#">Click here.</a></span>
+                            </div>
+                        </div>
+                        <button type="submit">Login</button>
+                        <br />
+                        <br />
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-3"> </div>
+        </div>
+    </div>
+</body>
+
+</html>
