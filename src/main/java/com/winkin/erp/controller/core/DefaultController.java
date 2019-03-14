@@ -18,10 +18,10 @@ public class DefaultController {
     @GetMapping(value = {""})
     public ModelAndView signinPage(HttpSession httpSession, Model model) {
 
-//    	if(httpSession.getAttribute("id") == null ) {
-//            return new ModelAndView("redirect:auth/signin");
-//
-//    	}
+    	if(httpSession.getAttribute(SingleTon.SESSION_USER_ID) == null ) {
+            return new ModelAndView("redirect:auth/signin");
+
+    	}
     	
     	
 

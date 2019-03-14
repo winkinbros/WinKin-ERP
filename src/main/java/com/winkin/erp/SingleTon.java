@@ -5,8 +5,8 @@ import javax.servlet.http.HttpSession;
 
 public class SingleTon {
 
-	private static final String SESSION_DEFAULT_ROLE_ID = "roleid";
-	private static final String SESSION_USER_ID = "userid";
+	public static final String SESSION_DEFAULT_ROLE_ID = "roleid";
+	public static final String SESSION_USER_ID = "userid";
 	private static SingleTon singleTon;
 
 	private SingleTon() {
@@ -34,6 +34,7 @@ public class SingleTon {
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
+	public static final String ERROR_MSG = "infoerror";
 
 	
 	public static void removeSession(HttpSession httpSession) {
