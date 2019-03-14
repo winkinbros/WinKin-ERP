@@ -27,6 +27,7 @@ import java.util.Properties;
 @PropertySource("classpath:application.properties")
 @PropertySource("classpath:db.properties")
 @PropertySource("classpath:mail.properties")
+@PropertySource("classpath:config.properties")
 @EnableTransactionManagement
 @EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
 @ComponentScan(basePackages = { "com.winkin.erp.*" })
