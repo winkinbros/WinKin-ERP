@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.winkin.erp.SingleTon;
+
 import javax.servlet.http.HttpSession;
 
 @Controller("auth")
@@ -30,11 +32,11 @@ public class AuthController {
 
 		if (userid == null || userid.trim().equals("") || password == null || password.trim().equals("")) {
 
-			return new ModelAndView("login");
+			return new ModelAndView(SingleTon.PAGE_LOGIN);
 
 		}
 
-		return new ModelAndView("login");
+		return new ModelAndView(SingleTon.PAGE_LOGIN);
 	}
 
 }
