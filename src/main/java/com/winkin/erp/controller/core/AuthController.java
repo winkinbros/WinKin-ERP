@@ -50,7 +50,7 @@ public class AuthController {
 		
 
 		// Account Validation
-		if (O_PJ_USER == null) {
+		if (O_PJ_USER == null || O_PJ_USER.getStatusyn().equals("N")) {
 
 			model.addAttribute(SingleTon.ERROR_MSG, "Invalid Userid..!");
 			
@@ -72,10 +72,10 @@ public class AuthController {
 		
 		
 		//Load Session
-		
+		httpSession.setAttribute(SingleTon.SESSION_USER_ID, O_PJ_USER.getUserid());
 		
 
-		return new ModelAndView(SingleTon.PAGE_LOGIN);
+		return new ModelAndView("redirect:/");
 	}
 
 }
