@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.winkin.erp.PJ_USER;
 import com.winkin.erp.SingleTon;
+import com.winkin.erp.pojo.PJ_USER;
 import com.winkin.erp.service.UserService;
 
 import java.util.HashMap;
@@ -73,6 +73,8 @@ public class AuthController {
 		
 		//Load Session
 		httpSession.setAttribute(SingleTon.SESSION_USER_ID, O_PJ_USER.getUserid());
+		httpSession.setAttribute(SingleTon.SESSION_CURRENT_COMPANY, "RWS");
+		httpSession.setAttribute(SingleTon.SESSION_CURRENT_ROLE_ID, "ADMIN");
 		
 
 		return new ModelAndView("redirect:/");
