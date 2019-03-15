@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.winkin.erp.PJ_USER;
 import com.winkin.erp.dao.UserDao;
+import com.winkin.erp.pojo.PJ_USER;
 
 @Service("UserService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)

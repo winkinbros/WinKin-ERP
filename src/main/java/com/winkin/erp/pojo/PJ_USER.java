@@ -1,4 +1,4 @@
-package com.winkin.erp;
+package com.winkin.erp.pojo;
 
 import com.winkin.erp.model.WKM_USER;
 

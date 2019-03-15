@@ -1,6 +1,6 @@
 package com.winkin.erp.service;
 
-import com.winkin.erp.PJ_USER;
+import com.winkin.erp.pojo.PJ_USER;
 
 public interface UserService {
 

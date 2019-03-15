@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.winkin.erp.PJ_USER;
 import com.winkin.erp.model.WKM_USER;
+import com.winkin.erp.pojo.PJ_USER;
 
 @Repository("UserDao")
 @Transactional
