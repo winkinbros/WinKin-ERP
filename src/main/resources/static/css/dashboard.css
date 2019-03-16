@@ -1,0 +1,24 @@
+.menu-margin{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.menu-text{
+	color: #fff;
+	font-size: 20px;
+	margin-top: 25px;
+}
+
+.dashboard-bg{
+   background:  #0747A6;
+   overflow: hidden;
+}
+
+.menu-icon{
+	height: 120px;
+	
+}
+
+.menu-centre{
+	margin: 0 auto;
+}

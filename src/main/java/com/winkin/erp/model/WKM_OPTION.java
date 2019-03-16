@@ -25,6 +25,9 @@ public class WKM_OPTION implements Serializable {
     
     @Column(name = "WKO_NAME")
     private String WKO_NAME;
+    
+    @Column(name = "WKO_SHOW_ORDER")
+    private Integer WKO_SHOW_ORDER;
 
 	public String getWKO_ID() {
 		return WKO_ID;
