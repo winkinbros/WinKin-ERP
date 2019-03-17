@@ -3,17 +3,16 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java Blog</title>
+    <title>WinKin | Login</title>
     <!--CSS FILES-->
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/animbg.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/w3.css}" />
-    
-    
+
+
 </head>
 
-<body>
+<body class="login-bg">
     <div class="container">
         <div class="row">
         </div>
@@ -26,13 +25,14 @@
                 <br />
                 <br />
                 <br />
-                <form  class ="w3-card-4 login-form" th:action="@{/auth/signin}" method="post">
+                <form class="w3-card-4 login-form" th:action="@{/auth/signin}" method="post">
                     <div class="imgcontainer">
                         <h3 class="logo-title">WinKin ERP</h3>
                     </div>
                     <div class="container">
                         <label class="text-dark" for="userid"><b>Username/User Id</b></label>
-                        <input type="text" placeholder="Enter Username/User Id" name="userid" th:value="${userid}" required="required" />
+                        <input type="text" placeholder="Enter Username/User Id" name="userid" th:value="${userid}"
+                            required="required" />
                         <label class="text-dark" for="password"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="password" required="required" />
                         <div class="row">
@@ -42,7 +42,7 @@
                                 </label>
                             </div>
                             <div class="col-sm-6">
-                                <span class="psw text-dark">Forgot Password? <a class ="text-url" href="#">Click here.</a></span>
+                                <span class="psw text-dark">Forgot Password? <a class="text-url" href="#">Click here.</a></span>
                             </div>
                         </div>
                         <button type="submit">Login</button>

@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
@@ -38,4 +39,6 @@ public class WKR_USER_ROLE implements Serializable {
 	@JoinColumn(name = "WKRUR_WKM_COMPANY",foreignKey=@ForeignKey(name ="FK_WKRUR_WKM_COMPANY"))
 	private WKM_COMPANY WKRUR_WKM_COMPANY;
 	
+	@Column(name = "WKRUR_DEFAULT_YN")
+	private String WKRUR_DEFAULT_YN;
 }

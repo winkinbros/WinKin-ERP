@@ -75,3 +75,15 @@ span.psw {
     color: blue;
 }
 
+.login-bg{
+   background:  #0747A6;
+   overflow: hidden;
+}
+
+.top-strip{
+    background: #DEE1E6;
+    height: 50px;
+    box-shadow: 0px 0px 8px 2px #000000;
+}
+
+
