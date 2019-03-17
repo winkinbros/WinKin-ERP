@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/dashboard.css}" />
-
+<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
 
 </head>
 
@@ -18,7 +18,7 @@
 
 <div ng-app="DashboardApp" ng-controller="MenuListController"
 	class="container">
-	<div class="row menu-margin">
+	<div class="row container menu-margin">
 		<div class="col-sm" style="margin: 20px" ng-repeat="menu in menulistdata">
 			<a th:href="@{app/{{menu.id}}}">
 				<div class="row">
@@ -41,7 +41,7 @@
 
 
 <script th:src="@{/js/angular.min.js}"></script>
-
+<script th:src="@{/js/jquery.min.js}"></script>
 
 
 
