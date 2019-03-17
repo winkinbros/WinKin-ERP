@@ -32,6 +32,7 @@ public class SingleTon {
 	public static final String PAGE_LOGIN = "login";
 	public static final String PAGE_DASHBOARD = "dashboard";
 	public static final String PAGE_NOTES_HOME = "notes";
+	public static final String PAGE_USER_HOME = "users";
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WinKin | Notes</title>
+<!--CSS FILES-->
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
+
+</head>
+
+<body class="dashboard-bg ">
+<head th:replace="header :: header">
+</head>
+
+<div class="container">
+	
+</div>
+
+
+
+
+
+<footer th:replace="footer :: footer"> </footer>
+
+
+<script th:src="@{/js/angular.min.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+
+
+
+<script th:inline="javascript">
+
+		var data = /*[[${test}]]*/'default';
+
+
+	});
+
+
+</script>
+
+
+</body>
+
+</html>
