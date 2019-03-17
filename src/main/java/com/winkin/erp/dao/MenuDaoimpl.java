@@ -30,8 +30,8 @@ public class MenuDaoimpl implements MenuDao {
 
 		List<PJ_MENU> L_O_PJ_MENU = new ArrayList<PJ_MENU>();
 		
-		// Getting Menu List by Role
-		String QryStr = "FROM WKR_ROLE_OPTION WHERE WKRRO_WKM_ROLE.WKMR_ID =:role";
+		// Getting Menu List by Role and order by menu master sort order
+		String QryStr = "FROM WKR_ROLE_OPTION WHERE WKRRO_WKM_ROLE.WKMR_ID =:role ORDER BY WKRRO_WKM_OPTION.WKO_SHOW_ORDER";
 		
 		Query query =  I_SessionFactory.getCurrentSession().createQuery(QryStr);
 
