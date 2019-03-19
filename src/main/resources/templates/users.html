@@ -15,7 +15,7 @@
 <head th:replace="header :: header">
 </head>
 
-<div class="container" th:text="${userlist}">
+<div class="container">
 	
 </div>
 
@@ -32,7 +32,8 @@
 var userlist = /*[[${userlist}]]*/'default';
 var rolelist = /*[[${rolelist}]]*/'default';
 
-
+console.log(userlist);
+console.log(rolelist);
 	});
 
 

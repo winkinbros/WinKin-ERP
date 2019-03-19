@@ -29,7 +29,7 @@ public class UserController {
     	}
 
     	model.addAttribute("userlist",I_UserService.getUserlist());
-    	model.addAttribute("rolelist",I_UserService.getRolelist());
+    	model.addAttribute("rolelist",I_UserService.getRolelist(null));
 	
         return new ModelAndView(SingleTon.PAGE_USER_HOME);
     }

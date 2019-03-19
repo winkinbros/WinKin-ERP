@@ -33,10 +33,10 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<PJ_ROLE> getRolelist() {
+	public List<PJ_ROLE> getRolelist(String userid) {
 
 		
-		return I_UserDao.getRolelist();
+		return I_UserDao.getRolelist(userid);
 	}
 	
 

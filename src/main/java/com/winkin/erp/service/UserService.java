@@ -12,6 +12,6 @@ public interface UserService {
 
 	List<PJ_USER> getUserlist();
 
-	List<PJ_ROLE> getRolelist();
+	List<PJ_ROLE> getRolelist(String userid);
 
 }

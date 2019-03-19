@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import com.winkin.erp.model.WKM_ROLE;
 import com.winkin.erp.model.WKM_USER;
 import com.winkin.erp.pojo.PJ_ROLE;
 import com.winkin.erp.pojo.PJ_USER;
@@ -62,8 +63,29 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<PJ_ROLE> getRolelist() {
+	public List<PJ_ROLE> getRolelist(String userid) {
+		
+
+		
 		List<PJ_ROLE> O_PJ_ROLE = new ArrayList<PJ_ROLE>();
+		
+
+		// Getting Menu List by Role and order by menu master sort order
+		String QryStr = "SELECT WKRUR_WKM_ROLE FROM WKR_USER_ROLE WKRUR WHERE WKRUR.WKRUR_WKM_USER.WKU_ID =:userid";
+
+		Query query = I_SessionFactory.getCurrentSession().createQuery(QryStr);
+
+		query.setParameter("userid", userid);
+		
+		@SuppressWarnings("unchecked")
+		List<WKM_ROLE> L_O_WKM_USER = query.list();
+		
+		for (WKM_ROLE O_WKM_ROLE : L_O_WKM_USER) {
+			
+			O_PJ_ROLE.add(new PJ_ROLE(O_WKM_ROLE));
+			
+			
+		}
 
 		return O_PJ_ROLE;
 	}
