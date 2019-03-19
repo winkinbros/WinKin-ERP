@@ -85,15 +85,37 @@ span.psw {
 .top-strip {
 	background: #DEE1E6;
 	min-height: 50px;
-	box-shadow: 0px 0px 8px 2px #000000;
+	box-shadow: 0px 0px 3px 2px #404040;
 }
-
+.top-strip .container-fluid {
+	width: 80%;
+}
+@media only screen and (max-width: 768px) {
+	.top-strip .container-fluid {
+		width: 100%;
+	}
+}
+.top-strip .logo-title {
+	padding: 13px 0;
+}
+.top-strip .head-notification {
+	text-align: right;
+}
+.top-strip .head-notification .head-user {
+	display: inline-block;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+.top-strip .head-notification .head-user .header-user-icon {
+	vertical-align: middle;
+	max-height: 30px;
+}
+.top-strip .head-notification .head-user p {
+	display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
 @font-face {
 	font-family: MACCOSBOLD;
 	src: url("../fonts/MACCOSBOLD.otf");
-}
-
-.header-user-icon {
-	height: 30px;
-	position: inherit;
 }

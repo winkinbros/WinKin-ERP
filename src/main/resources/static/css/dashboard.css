@@ -1,24 +1,32 @@
-.menu-margin{
-	margin-top: 50px;
-	margin-bottom: 40px;
-}
-
-.menu-text{
-	color: #fff;
-	font-size: 20px;
-	margin-top: 25px;
-}
-
 .dashboard-bg{
    background:  #0747A6;
    overflow: hidden;
 }
-
+.dashboard-bg .dashboard-group{
+	padding:20px;
+	display: block;
+}
+.dashboard-bg .dashboard-home {
+	padding: 50px 0;
+}
+.dashboard-bg .dashboard-group .dashboard-group-img{
+	text-align:center;
+}
+.dashboard-bg .dashboard-group .dashboard-group-img img {
+    max-height: 70px;
+}
+.dashboard-bg .dashboard-group .dashboard-group-text{
+	text-align:center;
+}
+.dashboard-bg .dashboard-group .dashboard-group-text .dashboard-group-text-inner{
+	color: #fff;
+    font-size: 20px;
+    padding-top: 10px;
+}
 .menu-icon{
 	height: 75px;
 	
 }
-
 .menu-centre{
 	margin: 0 auto;
 }

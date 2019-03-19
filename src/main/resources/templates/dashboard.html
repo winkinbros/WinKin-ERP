@@ -12,23 +12,23 @@
 
 </head>
 
-<body class="dashboard-bg ">
-<head th:replace="header :: header">
-</head>
+<body class="dashboard-bg">
+<header th:replace="header :: header">
+</header>
 
-<div ng-app="DashboardApp" ng-controller="MenuListController"
-	class="container">
-	<div class="row container menu-margin">
-		<div class="col-sm" style="margin: 20px" ng-repeat="menu in menulistdata">
-			<a th:href="@{app/{{menu.id}}}">
-				<div class="row">
-					<img  th:src="@{/appicon/{{menu.id}}.png}" class="img-responsive menu-icon  menu-centre"
-						alt="{{menu.name}}" />
-				</div>
-				<div class="row">
-					<p class="menu-text menu-centre">{{menu.name}}</p>
-				</div>
-			</a>
+<div ng-app="DashboardApp" ng-controller="MenuListController" class="container">
+	<div class="dashboard-home">
+		<div class="row">
+			<div class="col-sm" ng-repeat="menu in menulistdata">			
+				<a th:href="@{app/{{menu.id}}}" class="dashboard-group">
+					<div  class="dashboard-group-img">
+						<img  th:src="@{/appicon/{{menu.id}}.png}" class="img-responsive" alt="{{menu.name}}" />
+					</div>
+					<div class="dashboard-group-text">
+						<p class="dashboard-group-text-inner">{{menu.name}}</p>
+					</div>
+				</a>
+			</div>			
 		</div>
 	</div>
 </div>
