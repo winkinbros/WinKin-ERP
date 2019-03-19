@@ -29,6 +29,9 @@ public class WKM_USER  implements Serializable {
 
     @Column(name = "WKU_OTP")
     private String WKU_OTP;
+    
+    @Column(name = "WKU_PASSWORD")
+    private String WKU_PASSWORD;
 
     @Column(name = "WKU_LOCKED_YN")
     private String WKU_LOCKED_YN;

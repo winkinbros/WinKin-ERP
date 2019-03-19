@@ -28,7 +28,7 @@ public class NotesController {
 
 		if (SingleTon.isNewSession(httpSession)) {
 
-			return new ModelAndView("redirect:auth/signin");
+			return new ModelAndView("redirect:/auth/signin");
 
 		}
 

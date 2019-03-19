@@ -15,13 +15,9 @@
 <head th:replace="header :: header">
 </head>
 
-<div class="container">
+<div class="container" th:text="${userlist}">
 	
 </div>
-
-
-
-
 
 <footer th:replace="footer :: footer"> </footer>
 
@@ -33,7 +29,8 @@
 
 <script th:inline="javascript">
 
-		var data = /*[[${test}]]*/'default';
+var userlist = /*[[${userlist}]]*/'default';
+var rolelist = /*[[${rolelist}]]*/'default';
 
 
 	});

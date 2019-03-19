@@ -8,17 +8,28 @@ public class PJ_USER {
 	String email;
 	String lockedyn;
 	String statusyn;
+	String password;
 
 	public PJ_USER() {
 
 	}
 
-	public PJ_USER(WKM_USER O_WKM_USER) {
+	public PJ_USER(WKM_USER O_WKM_USER, Boolean withcredential, Boolean accountstatus) {
 
 		this.userid = O_WKM_USER.getWKU_ID();
 		this.email = O_WKM_USER.getWKU_REG_EMAIL();
-		this.lockedyn = O_WKM_USER.getWKU_LOCKED_YN();
-		this.statusyn = O_WKM_USER.getWKU_STATUS_YN();
+
+		if (withcredential) {
+		
+		}
+		
+		if (accountstatus) {
+
+			this.lockedyn = O_WKM_USER.getWKU_LOCKED_YN();
+			this.statusyn = O_WKM_USER.getWKU_STATUS_YN();
+		}
+		
+
 	}
 
 	public String getUserid() {
