@@ -65,6 +65,29 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public List<PJ_ROLE> getRolelist(String userid) {
 		
+		if(userid == null) {
+			
+			List<PJ_ROLE> O_PJ_ROLE = new ArrayList<PJ_ROLE>();
+			
+
+			// Getting Menu List by Role and order by menu master sort order
+			String QryStr = "SELECT WKRUR_WKM_ROLE FROM WKR_USER_ROLE";
+
+			Query query = I_SessionFactory.getCurrentSession().createQuery(QryStr);
+			
+			@SuppressWarnings("unchecked")
+			List<WKM_ROLE> L_O_WKM_USER = query.list();
+			
+			for (WKM_ROLE O_WKM_ROLE : L_O_WKM_USER) {
+				
+				O_PJ_ROLE.add(new PJ_ROLE(O_WKM_ROLE));
+				
+				
+			}
+
+			return O_PJ_ROLE;
+			
+		}else {
 
 		
 		List<PJ_ROLE> O_PJ_ROLE = new ArrayList<PJ_ROLE>();
@@ -89,5 +112,5 @@ public class UserDaoImpl implements UserDao {
 
 		return O_PJ_ROLE;
 	}
-
+	}
 }
