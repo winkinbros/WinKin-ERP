@@ -12,6 +12,6 @@ public interface UserDao {
 
 	List<PJ_USER> getUserlist();
 
-	List<PJ_ROLE> getRolelist(String userid);
+	List<PJ_ROLE> getRolelist();
 
 }
