@@ -8,7 +8,6 @@ public class SingleTon {
 
 	public static final String SESSION_CURRENT_ROLE_ID = "roleid";
 	public static final String SESSION_USER_ID = "userid";
-	public static final String SESSION_CURRENT_COMPANY = "currentcompany";
 
 	private static SingleTon singleTon;
 
@@ -78,9 +77,7 @@ public class SingleTon {
 		PJ_SESSION O_PJ_SESSION = new PJ_SESSION();
 		
 		O_PJ_SESSION.setUserid((String) httpSession.getAttribute(SingleTon.SESSION_USER_ID));
-		
-		O_PJ_SESSION.setCompanyid((String) httpSession.getAttribute(SingleTon.SESSION_CURRENT_COMPANY));
-		
+				
 		O_PJ_SESSION.setRole((String) httpSession.getAttribute(SingleTon.SESSION_CURRENT_ROLE_ID));
 		
 		return O_PJ_SESSION;

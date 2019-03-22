@@ -72,7 +72,6 @@ public class AuthController {
 		
 		//Load Session
 		httpSession.setAttribute(SingleTon.SESSION_USER_ID, O_PJ_USER.getUserid());
-		httpSession.setAttribute(SingleTon.SESSION_CURRENT_COMPANY, "RWS");
 		httpSession.setAttribute(SingleTon.SESSION_CURRENT_ROLE_ID, "ADMIN");
 		
 

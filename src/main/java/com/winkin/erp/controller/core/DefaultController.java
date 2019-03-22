@@ -15,22 +15,17 @@ import com.winkin.erp.service.MenuService;
 @Controller("/")
 @RequestMapping()
 public class DefaultController {
-
 	
 	@Autowired
 	private MenuService A_MenuService;
-	
-	
 
     @GetMapping(value = {""})
     public ModelAndView signinPage(HttpSession httpSession, Model model) {
 
-    	if(SingleTon.isNewSession(httpSession) ) {
-    		
-            return new ModelAndView("redirect:auth/signin");
-
-    	}
-
+		httpSession.setAttribute(SingleTon.SESSION_CURRENT_ROLE_ID, "ADMIN");
+		
+    	
+    	
     	//Fetching Dash-board Menu List
     	model.addAttribute("menulist",A_MenuService.getMenulist(SingleTon.getSessionData(httpSession)));
     	

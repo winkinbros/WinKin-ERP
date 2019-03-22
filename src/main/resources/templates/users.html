@@ -3,11 +3,12 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>WinKin | Notes</title>
+<title>WinKin | Users &amp; Roles</title>
 <!--CSS FILES-->
 <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/app-home.css}" />
 
 </head>
 
@@ -16,7 +17,39 @@
 </head>
 
 <div class="container">
-	
+	<div class="row app-menu-strip">
+
+		<div class="dropdown">
+			<button class="dropbtn">Users</button>
+			<div class="dropdown-content">
+				<a href="#">Create User</a>
+				<a href="#">Manage User</a>
+			</div>
+		</div>
+		
+		<div class="dropdown">
+			<button class="dropbtn">User Groups</button>
+			<div class="dropdown-content">
+				<a href="#">Create Groups</a>
+				 <a href="#">Manage Groups</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Roles</button>
+			<div class="dropdown-content">
+				<a href="#">Manage Role</a> 
+				<a href="#">Assign Role</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Deportment's</button>
+			<div class="dropdown-content">
+				<a href="#">Create Deportment</a>
+				 <a href="#">Manage Deportment</a>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 <footer th:replace="footer :: footer"> </footer>

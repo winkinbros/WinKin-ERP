@@ -22,12 +22,7 @@ public class UserController {
     @GetMapping(value = {"","/"})
     public ModelAndView signinPage(HttpSession httpSession, Model model) {
 
-    	if(SingleTon.isNewSession(httpSession) ) {
-    		
-            return new ModelAndView("redirect:/auth/signin");
-
-    	}
-
+    	
     	model.addAttribute("userlist",I_UserService.getUserlist());
     	model.addAttribute("rolelist",I_UserService.getRolelist());
 	
