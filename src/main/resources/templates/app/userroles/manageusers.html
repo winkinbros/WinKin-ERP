@@ -17,39 +17,17 @@
 </head>
 
 <div class="container">
-	<div class="row app-menu-strip">
+<footer th:replace="app/menus/menu-user-app :: menu-user-app"> </footer>
 
-		<div class="dropdown">
-			<button class="dropbtn">Users</button>
-			<div class="dropdown-content">
-				<a href="#">Create User</a>
-				<a href="#">Manage User</a>
-			</div>
-		</div>
-		
-		<div class="dropdown">
-			<button class="dropbtn">User Groups</button>
-			<div class="dropdown-content">
-				<a href="#">Create Groups</a>
-				 <a href="#">Manage Groups</a>
-			</div>
-		</div>
-		<div class="dropdown">
-			<button class="dropbtn">Roles</button>
-			<div class="dropdown-content">
-				<a href="#">Manage Role</a> 
-				<a href="#">Assign Role</a>
-			</div>
-		</div>
-		<div class="dropdown">
-			<button class="dropbtn">Deportment's</button>
-			<div class="dropdown-content">
-				<a href="#">Create Deportment</a>
-				 <a href="#">Manage Deportment</a>
-			</div>
-		</div>
-
-	</div>
+	
+	<div class="row">
+	 <ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Users</a></li>
+  <li><a href="#">Manage Users</a></li>
+</ul> </div>
+	
+	
 </div>
 
 <footer th:replace="footer :: footer"> </footer>

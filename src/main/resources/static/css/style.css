@@ -95,3 +95,32 @@ span.psw {
 .header-user-icon {
 	height: 30px;
 }
+
+ul.breadcrumb {
+	padding: 3px;
+	padding-left:0px;
+	list-style: none;
+	background-color: #eee0;
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 13px;
+}
+
+ul.breadcrumb li+li:before {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: black;
+	content: " /\00a0";
+}
+
+ul.breadcrumb li a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+	color: #01447e;
+	text-decoration: underline;
+}
