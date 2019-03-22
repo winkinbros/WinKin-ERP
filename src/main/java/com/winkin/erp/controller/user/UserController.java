@@ -19,7 +19,7 @@ public class UserController {
 	@Autowired
 	private UserService I_UserService;
 
-    @GetMapping(value = {"","/"})
+    @GetMapping(value = {"","/","manage"})
     public ModelAndView signinPage(HttpSession httpSession, Model model) {
 
     	
