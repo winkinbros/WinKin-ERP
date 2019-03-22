@@ -35,10 +35,6 @@ public class WKR_USER_ROLE implements Serializable {
 	@JoinColumn(name = "WKRUR_WKM_USER",foreignKey=@ForeignKey(name ="FK_WKRUR_WKM_USER"))
 	private WKM_USER WKRUR_WKM_USER;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "WKRUR_WKM_COMPANY",foreignKey=@ForeignKey(name ="FK_WKRUR_WKM_COMPANY"))
-	private WKM_COMPANY WKRUR_WKM_COMPANY;
-	
 	@Column(name = "WKRUR_DEFAULT_YN")
 	private String WKRUR_DEFAULT_YN;
 }

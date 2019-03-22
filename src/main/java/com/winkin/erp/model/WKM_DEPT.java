@@ -11,17 +11,17 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicUpdate
-@Table(name = "WKM_COMPANY")
-public class WKM_COMPANY implements Serializable {
+@Table(name = "WKM_DEPT")
+public class WKM_DEPT implements Serializable {
 
 	private static final long serialVersionUID = 2L;
 
 	@Id
-	@Column(name = "WKMC_ID", unique = true)
-	private String WKMC_ID;
+	@Column(name = "WKMD_ID", unique = true)
+	private String WKMD_ID;
 
-	@Column(name = "WKMC_NAME")
-	private String WKMC_NAME;
+	@Column(name = "WKMD_NAME")
+	private String WKMD_NAME;
 
 	
 }
