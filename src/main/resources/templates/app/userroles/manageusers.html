@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/app-home.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/datatables.min.css}" />
 
 </head>
 
@@ -30,7 +32,32 @@
 	</div>
 	<!--BC End  -->
 
+	<div class="row">
 
+		<table id="usertable" class="display cell-border" style="width: 100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Enr.From</th>
+					<th>Status</th>
+					<th>Options</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Enr.From</th>
+					<th>Status</th>
+					<th>Options</th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
 
 </div>
 
@@ -39,19 +66,45 @@
 
 <script th:src="@{/js/angular.min.js}"></script>
 <script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/datatables.min.js}"></script>
 
 
 
 <script th:inline="javascript">
+	var userlist = /*[[${userlist}]]*/'[]';
+	var rolelist = /*[[${rolelist}]]*/'[]';
+	
+	$(document).ready(function() {
+				
+		$('#usertable').DataTable({
+			"data" : userlist,
+			"columns" : [ {
+				"data" : "userid",
+				"defaultContent": "-"
+			},{
+				"data": "email",
+				"defaultContent" : "-"
+			},{
+				"data": "from",
+				"defaultContent" : "-"
+			},{
+				"data" : "status",
+				"defaultContent" : "-"
+			},
+			{
+				data :null,
+				"defaultContent" : "-"
 
-var userlist = /*[[${userlist}]]*/'default';
-var rolelist = /*[[${rolelist}]]*/'default';
+			}]
 
-console.log(userlist);
-console.log(rolelist);
+		});
+		
+		$(".dataTables_wrapper").css("width", "100%");
+		
 	});
 
-
+	console.log(userlist);
+	console.log(rolelist);
 </script>
 
 

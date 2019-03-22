@@ -124,3 +124,9 @@ ul.breadcrumb li a:hover {
 	color: #01447e;
 	text-decoration: underline;
 }
+
+.dt-custom{
+	width: 100%;
+	padding-left: 2dp;
+	padding-right: 2dp;
+}
