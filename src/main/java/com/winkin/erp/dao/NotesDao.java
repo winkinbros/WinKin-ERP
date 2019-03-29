@@ -8,4 +8,9 @@ public interface NotesDao {
 
 	Boolean AddNotes(PJ_NOTES rO_PJ_NOTES);
 
+	Boolean DeleteNotes();
+
+	Boolean UpdateNotes(PJ_NOTES rO_PJ_NOTES);
+
 }
+

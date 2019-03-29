@@ -38,13 +38,27 @@ public class NotesController {
 		
 	}
 
-	//@DeleteMapping(value= {/"delete"})
-	//public ModelAndView post_delete(HttpSession httpSession, Model model, @RequestBody PJ_NOTES RO_PJ_NOTES) {
 
-	
-	
-	
-	
-	
-}
-
+ @DeleteMapping(value= {"/delete"}) 
+ public ModelAndView post_delete(HttpSession httpSession, Model model) {
+  
+  Boolean O_PJ_NOTES = A_NotesService.DeleteNotes();
+  
+  
+  return new ModelAndView(SingleTon.PAGE_NOTES);
+  
+  }
+  
+  @PostMapping(value = { "/update" }) public ModelAndView
+  post_update(HttpSession httpSession, Model model, @RequestBody PJ_NOTES
+  RO_PJ_NOTES) {
+  
+  //model.addAllAttributes(SingleTon.PAGE_NOTES); Boolean O_PJ_NOTES =
+  A_NotesService.UpdateNotes(RO_PJ_NOTES);
+  
+  
+  return new ModelAndView(SingleTon.PAGE_NOTES);
+  
+  
+  } }
+ 

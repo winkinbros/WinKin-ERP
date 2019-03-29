@@ -11,10 +11,13 @@ import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.winkin.erp.model.WKM_ATTACHMENT;
 import com.winkin.erp.model.WKM_COMPANY;
+import com.winkin.erp.model.WKM_NOTES;
 import com.winkin.erp.model.WKM_OPTION;
 import com.winkin.erp.model.WKM_ROLE;
 import com.winkin.erp.model.WKM_USER;
+import com.winkin.erp.model.WKR_NOTES_TAGS;
 import com.winkin.erp.model.WKR_ROLE_OPTION;
 import com.winkin.erp.model.WKR_USER_ROLE;
 
@@ -60,7 +63,7 @@ public class Config {
 
 		// CORE
 		factoryBean.setAnnotatedClasses(WKM_USER.class, WKM_ROLE.class, WKM_COMPANY.class, WKM_OPTION.class,
-				WKR_ROLE_OPTION.class, WKR_USER_ROLE.class);
+				WKR_ROLE_OPTION.class, WKR_USER_ROLE.class,WKM_NOTES.class,WKM_ATTACHMENT.class,WKR_NOTES_TAGS.class);
 
 		return factoryBean;
 	}

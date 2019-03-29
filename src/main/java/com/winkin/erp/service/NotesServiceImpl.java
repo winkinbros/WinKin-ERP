@@ -21,6 +21,18 @@ public class NotesServiceImpl implements NotesService{
 		return A_NotesDao.AddNotes(rO_PJ_NOTES);
 	}
 
+	@Override
+	public Boolean DeleteNotes() {
+		// TODO Auto-generated method stub
+		return A_NotesDao.DeleteNotes();
+	}
+
+	@Override
+	public Boolean UpdateNotes(PJ_NOTES rO_PJ_NOTES) {
+		// TODO Auto-generated method stub
+		return A_NotesDao.UpdateNotes(rO_PJ_NOTES);
+	}
+
 	
 	
 		
